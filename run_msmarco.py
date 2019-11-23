@@ -51,9 +51,9 @@ flags.DEFINE_integer(
     "Sequences longer than this will be truncated, and sequences shorter "
     "than this will be padded.")
 
-flags.DEFINE_bool("do_train", True, "Whether to run training.")
+flags.DEFINE_bool("do_train", False, "Whether to run training.")
 
-flags.DEFINE_bool("do_eval", True, "Whether to run eval on the dev set.")
+flags.DEFINE_bool("do_eval", False, "Whether to run eval on the dev set.")
 
 flags.DEFINE_integer("train_batch_size", 32, "Total batch size for training.")
 
@@ -411,6 +411,7 @@ def main(_):
 
           all_metrics += metrics.metrics(
               gt=gt, pred=pred_docs, metrics_map=METRICS_MAP)
+          tf.logging.info("  ".join(METRICS_MAP))
 
           if FLAGS.msmarco_output:
             start_idx = example_idx * FLAGS.num_eval_docs
