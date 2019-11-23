@@ -412,7 +412,7 @@ def main(_):
           all_metrics += metrics.metrics(
               gt=gt, pred=pred_docs, metrics_map=METRICS_MAP)
           tf.logging.info("  ".join(METRICS_MAP))
-          tf.logging.info(all_metrics)
+          tf.logging.info(all_metrics/example_idx)
 
           if FLAGS.msmarco_output:
             start_idx = example_idx * FLAGS.num_eval_docs
