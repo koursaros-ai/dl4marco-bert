@@ -406,7 +406,7 @@ def main(_):
           labels = np.stack(labels)
 
           scores = log_probs[:, 1]
-          pred_docs = scores.argsort()[::-1]
+          pred_docs = scores.argsort()#[::-1]
           gt = set(list(np.where(labels > 0)[0]))
 
           all_metrics += metrics.metrics(
