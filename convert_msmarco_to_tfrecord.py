@@ -188,7 +188,10 @@ def convert_train_dataset(tokenizer):
         print('Estimated hours remaining to write the training set: {}'.format(
             hours_remaining))
 
-      query, positive_doc, negative_doc = line.rstrip().split('\t')
+      try:
+        query, positive_doc, negative_doc = line.rstrip().split('\t')
+      except:
+        print(line)
 
       write_to_tf_record(writer=writer,
                          tokenizer=tokenizer,
