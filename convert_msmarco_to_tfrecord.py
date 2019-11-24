@@ -209,8 +209,8 @@ def main():
     os.mkdir(FLAGS.output_folder)
 
   convert_train_dataset(tokenizer=tokenizer)
-  convert_eval_dataset(set_name='dev', tokenizer=tokenizer)
-  convert_eval_dataset(set_name='eval', tokenizer=tokenizer)
+  # convert_eval_dataset(set_name='dev', tokenizer=tokenizer)
+  # convert_eval_dataset(set_name='eval', tokenizer=tokenizer)
   print('Done!')  
 
 if __name__ == '__main__':
