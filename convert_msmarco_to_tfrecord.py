@@ -194,6 +194,7 @@ def convert_train_dataset(tokenizer):
         print('***POSITIVE DOC***')
         print(positive_doc)
         print('***NEGATIVE DOC***')
+        print(negative_doc)
       except:
         print(line)
 
