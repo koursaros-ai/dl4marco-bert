@@ -190,11 +190,11 @@ def convert_train_dataset(tokenizer):
 
       try:
         query, positive_doc, negative_doc = line.rstrip().split('\t')
-        print(query)
-        print('***POSITIVE DOC***')
-        print(positive_doc)
-        print('***NEGATIVE DOC***')
-        print(negative_doc)
+        # print(query)
+        # print('***POSITIVE DOC***')
+        # print(positive_doc)
+        # print('***NEGATIVE DOC***')
+        # print(negative_doc)
       except:
         print(line)
 
